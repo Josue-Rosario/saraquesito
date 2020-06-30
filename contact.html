@@ -42,7 +42,7 @@
 						    <span class="text">Sarasquesitos@gmail.com </span>
 					    </div>
 					    <div class="col-md-5 pr-4 d-flex topper align-items-center text-lg-right justify-content-end">
-						    <p class="mb-0 register-link"><span>Open hours:</span> <span>Monday - Sunday</span> <span>8:00AM - 9:00PM</span></p>
+						    <p class="mb-0 register-link"><span>Open Days:</span> <span>Tuesday - Saturday</span></p>
 					    </div>
 				    </div>
 			    </div>
@@ -86,22 +86,24 @@
 			<div class="container">
 				<div class="row d-flex align-items-stretch no-gutters">
 					<div class="col-md-6 pt-5 px-2 pb-2 p-md-5 order-md-last">
-						<h2 class="h4 mb-2 mb-md-5 font-weight-bold">Contact Us</h2>
-						<form action="#">
+            <h2 class="h4 mb-2 mb-md-5 font-weight-bold">Contact Us</h2>
+            
+						<form action="contact.php" method="post" class="ajax">
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Name">
+
+                <input type="text" name="name" placeholder="Your name">
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Email">
+                <input type="text" name="email" placeholder="Your email">
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Subject">
+                <input type="text" name="subject" placeholder="Subject">
               </div>
               <div class="form-group">
-                <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+                <textarea name="message" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
               </div>
               <div class="form-group">
-                <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+                <input type="submit" value="Send" class="btn btn-primary py-3 px-5">
               </div>
             </form>
 					</div>
@@ -148,12 +150,11 @@
           <div class="col-md-6 col-lg-3">
             <div class="ftco-footer-widget mb-4">
               <h2 class="ftco-heading-2">Sara's Quesitos</h2>
-              <p>Sara’s Quesitos has more than 20 years of experience in the bakery industry. 
-                Not only has she been the owner of two bakeries, but you can see her passion in the art of baking thru her products.</p>
+              <p>Specializing in the most delicious Puerto rican desserts.All made fresh daily to delight your palate.</p>
               <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
-                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+                <li class="ftco-animate"><a href="https://twitter.com/sarasquesitos?lang=en"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.facebook.com/Saras-Quesitos-LLC-828540993858203/"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.instagram.com/sarasquesitosllc/?hl=en"><span class="icon-instagram"></span></a></li>
               </ul>
             </div>
           </div>
