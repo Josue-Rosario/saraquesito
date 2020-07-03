@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Sara Quesitos</title>
+    <title>Sara's Quesitos</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -45,7 +45,7 @@
 						    <span class="text">Sarasquesitos@gmail.com </span>
 					    </div>
 					    <div class="col-md-5 pr-4 d-flex topper align-items-center text-lg-right justify-content-end">
-						    <p class="mb-0 register-link"><span>Hours available:</span> <span>Tuesday - Saturday</span></p>
+						    <p class="mb-0 register-link"><span>Opens Days:</span> <span>Tuesday - Saturday</span></p>
 					    </div>
 				    </div>
 			    </div>
@@ -61,7 +61,7 @@
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
-	        	<li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+	        	<li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
 	        	<li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
 	        	<li class="nav-item"><a href="menu.html" class="nav-link">Menu</a></li>
 	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
@@ -115,7 +115,7 @@
         </div>
       </div>
     </section>
-<!--
+
     <section class="ftco-section ftco-no-pt ftco-no-pb">
     	<div class="container-fluid">
     		<div class="row">
@@ -124,7 +124,7 @@
     					<div class="row">
     						<div class="col-md-3">
     							<div class="featured-menus ftco-animate">
-			              <div class="menu-img img" style="background-image: url(images/breakfast-1.jpg);"></div>
+			              <div class="menu-img img" style="background-image: url(images/Pastries/Quesitos-2.jpg);"></div>
 			              <div class="text text-center">
 		                  <h3>Quesitos</h3>
 			              </div>
@@ -132,7 +132,7 @@
     						</div>
     						<div class="col-md-3">
     							<div class="featured-menus ftco-animate">
-			              <div class="menu-img img" style="background-image: url(images/breakfast-2.jpg);"></div>
+			              <div class="menu-img img" style="background-image: url(images/Pastries/pastelillos.png);"></div>
 			              <div class="text text-center">
 		                  <h3>Pastelillos de Guayaba</h3>
 			              </div>
@@ -140,7 +140,7 @@
     						</div>
     						<div class="col-md-3">
     							<div class="featured-menus ftco-animate">
-			              <div class="menu-img img" style="background-image: url(images/breakfast-3.jpg);"></div>
+			              <div class="menu-img img" style="background-image: url(images/Pastries/Polvorones.png);"></div>
 			              <div class="text text-center">
 		                  <h3>Polvorones</h3>		              
 			              </div>
@@ -148,7 +148,7 @@
     						</div>
     						<div class="col-md-3">
     							<div class="featured-menus ftco-animate">
-			              <div class="menu-img img" style="background-image: url(images/breakfast-4.jpg);"></div>
+			              <div class="menu-img img" style="background-image: url(images/Pastries/Surtidas.png);"></div>
 			              <div class="text text-center">
 		                  <h3>Bandejas surtidas</h3>
 			              </div>
@@ -159,7 +159,7 @@
     			</div>
     		</div>
     	</div>
-    </section> -->
+    </section> 
 	
 
 		<section class="ftco-section ftco-wrap-about">
@@ -580,7 +580,32 @@
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
   <script src="js/Main.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+  <script> 
+  // this is the id of the form
+  $('#contact').submit(function (e) {
+    e.preventDefault() // avoid to execute the actual submit of the form.
+
+    var form = $(this)
+
+    console.log('Hello Bitch...... stop asking shit')
+
+    console.log('form', form)
+    $.ajax({
+      type: 'POST',
+      url: '/api/contact',
+      data: form.serialize(), // serializes the form's elements.
+      success: function (data) {
+        alert(data) // show response from the php script.
+      },
+    })
+  })
+
+    
+</script>
+  
+
 
   
   

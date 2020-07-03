@@ -3,3 +3,4 @@ _site/
 .jekyll-cache/
 Location: https://saraquesito.vercel.app/ 
 Vary: Upgrade-Insecure-Requests/
+.vercel

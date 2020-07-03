@@ -1,25 +1,20 @@
-$('Form.ajax').on('submit',function() {
-  var that = $(this),
-      url = that.attr('action'),
-      type = that.attr('method'),
-      data = {},
+console.log('heee')
 
-that.find('[name]').each(function(index, value) {
-    var that = $(this),
-        name = that.attr('name'),
-        value = that.val();
+// this is the id of the form
+$('ajax/contact.php').submit(function (e) {
+  e.preventDefault() // avoid to execute the actual submit of the form.
 
-    data[name] = value;
-});
+  var form = $(this)
 
-$.ajax({
-    url: url,
-    type: type,
-    data: data,
-    success: function(response) {
-        console.log(response);
-    }
+  console.log('Hello Bitch...... stop asking shit')
+
+  console.log('form', form)
+  $.ajax({
+    type: 'POST',
+    url: '/api/contact',
+    data: form.serialize(), // serializes the form's elements.
+    success: function (data) {
+      alert(data) // show response from the php script.
+    },
+  })
 })
-
-    return false;
-});
