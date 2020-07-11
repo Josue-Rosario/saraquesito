@@ -1,4 +1,4 @@
-console.log('heee')
+/* console.log('heee')
 
 // this is the id of the form
 $('ajax/contact.php').submit(function (e) {
@@ -17,4 +17,4 @@ $('ajax/contact.php').submit(function (e) {
       alert(data) // show response from the php script.
     },
   })
-})
+}) */
